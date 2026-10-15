@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Unwritten Arcana</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=IM+Fell+English:ital@0;1&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/addons/p5.sound.min.js"></script>
+</head>
+<body>
+  <main id="stage">
+    <div id="canvas-holder"></div>
+
+    <header class="masthead">
+      <div class="brand-mark">✶</div>
+      <div>
+        <div class="eyebrow">AN EXPERIMENT IN SYMBOL & SELF</div>
+        <h1>The Unwritten <em>Arcana</em></h1>
+      </div>
+      <button id="sound-button" class="quiet-button">SOUND ON</button>
+    </header>
+
+    <section id="question-panel" class="glass-panel question-panel">
+      <div class="panel-top">
+        <span class="eyebrow">YOUR PRIVATE READING</span>
+        <span id="question-number">QUESTION I / V</span>
+      </div>
+      <div class="progress"><span id="progress-fill"></span></div>
+      <p id="question">What are you ready to release?</p>
+      <div id="choices" class="choices"></div>
+      <p class="microcopy">There is no correct answer. Choose what feels true today.</p>
+    </section>
+
+    <section id="final-panel" class="glass-panel final-panel hidden">
+      <div class="eyebrow">YOUR THREE-CARD READING</div>
+      <h2 id="reading-title">The story beneath the surface</h2>
+      <p id="reading-summary"></p>
+      <div class="journal-prompt">
+        <span class="eyebrow">A QUESTION TO KEEP</span>
+        <p id="journal-question"></p>
+      </div>
+      <div class="final-actions">
+        <button id="print-button" class="gold-button">SAVE / PRINT READING</button>
+        <button id="reset-button" class="quiet-button">BEGIN AGAIN ↗</button>
+      </div>
+      <p class="microcopy">Click any card to explore its meaning.</p>
+    </section>
+
+    <div id="intro-overlay">
+      <div class="intro-card">
+        <div class="ornament">✶ ❧ ✶</div>
+        <p class="eyebrow">A CONTEMPORARY TAROT RITUAL</p>
+        <h2>Enter the<br><em>Unwritten Arcana</em></h2>
+        <p>Five questions. Three cards. One symbolic portrait of the moment you are living.</p>
+        <button id="enter-button" class="gold-button">BEGIN YOUR READING</button>
+        <small>Best experienced with sound · Your answers are not stored.</small>
+        <div class="ornament bottom-ornament">❧ ✶ ❧</div>
+      </div>
+    </div>
+
+    <div id="card-detail" class="detail-overlay hidden">
+      <div class="detail-card">
+        <button id="close-detail" class="close-button" aria-label="Close">×</button>
+        <div id="detail-number" class="eyebrow"></div>
+        <h2 id="detail-name"></h2>
+        <p id="detail-position" class="detail-position"></p>
+        <p id="detail-meaning"></p>
+        <div class="detail-rule"></div>
+        <p id="detail-reflection" class="detail-reflection"></p>
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <span>MADE OF QUESTIONS, MEMORY & MYTH</span>
+      <span id="sound-status">SOUND · ON</span>
+    </footer>
+  </main>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
